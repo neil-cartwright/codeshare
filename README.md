@@ -16,5 +16,5 @@
 
 ### Notes
 
--   Tailwind, sass, and vue can be used freely and will be statically pre-generated
+-   Tailwind, Sass, and Vue components can be used freely and will be statically pre-generated
 -   JavaScript logic will not be run on server unless the client:load attribute is provided on the given component, or any of it's ancestors.
