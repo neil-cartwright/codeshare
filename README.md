@@ -2,7 +2,7 @@
 
 ### Setup
 
--   git clone REPO_NAME
+-   clone this repo!
 -   npm install
 -   touch .env
     -   SITE_FOLDER=INTERNAL_SITE_NAME
