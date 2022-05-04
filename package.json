@@ -5,7 +5,6 @@
 	"type": "module",
 	"scripts": {
 		"dev": "astro dev",
-		"prod": "node scripts/prod.js",
 		"build": "astro build"
 	},
 	"devDependencies": {

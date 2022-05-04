@@ -9,4 +9,14 @@
 			</div>
 		</div>
 	</header>
+
+	<button @click="sendMessage">Console Message</button>
 </template>
+
+<script setup>
+
+const sendMessage = () => {
+	console.log('called')
+}
+
+</script>

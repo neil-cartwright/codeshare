@@ -1,16 +1,14 @@
 ---
 import BMJHeader from '../components/BMJHeader.vue';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
 ---
 
 <BaseLayout>
-	<BMJHeader />
-	<h1>Site content</h1>
+	<BMJHeader client:load />
+	<h1 class="text-blue"> title </h1>
+	<br/>
+	<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quis doloribus harum repellat omnis est ab facere ducimus qui ullam commodi distinctio ex, voluptate minima obcaecati unde, neque nemo. Voluptatum.</p>
 </BaseLayout>
 
-<style lang="scss">
-h1 {
-	text-decoration: underline dashed;
-	color: purple;
-}
-</style>
+<style></style>
