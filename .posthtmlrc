@@ -1,0 +1,12 @@
+{
+  "input": "/public/*/*.html",
+  "options": {
+    "async": true,
+    "closingSingleTag": 'slash'
+  },
+  "plugins": {
+      "@redsnapper/posthtml-astro-xhtml":{
+      
+      }
+  }
+}

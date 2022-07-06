@@ -4,15 +4,25 @@
 
 -   clone this repo!
 -   npm install
--   touch .env
-    -   SITE_FOLDER=INTERNAL_SITE_NAME
-    -   PUBLIC_SITE_NAME=EXTERNAL_SITE_NAME
--   npm run dev | prod
+-   npm run dev | build
 
 ### Requirements
 
--   Place images within /static
--   BaseLayout must wrap all content to satisfy build requirements
+- BaseLayout must wrap all content to satisfy build requirements
+
+### Images
+Using imports for images as the images will be processed in the build and also referenced correctly.
+
+```vue
+<script setup>
+  import logo from '@img/bmj-logo.png';
+</script>
+<template>
+    <img :src="logo" alt="BMJ Logo" />
+</template>
+```
+
+It is possible to place assets into a static directory. They will not be touched by the build and will be copied over. The file can then be referenced directly but do not forget to include the site-folder in your reference. eg /site-name/my-img.png.
 
 ### Notes
 

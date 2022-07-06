@@ -1,12 +1,15 @@
 ---
-const PUBLIC_SITE_NAME = import.meta.env.PUBLIC_SITE_NAME;
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
 ---
-<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>BMJ | { PUBLIC_SITE_NAME }</title>
+	<title>BMJ | { title }</title>
 </head>
 <body>
 	<slot />
