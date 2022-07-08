@@ -21,6 +21,14 @@ Using imports for images as the images will be processed in the build and also r
     <img :src="logo" alt="BMJ Logo" />
 </template>
 ```
+```astro
+---
+import logo from '@img/bmj-logo.png';
+---
+<html>
+    <img src={logo} alt="BMJ Logo" />
+</html>
+```
 
 It is possible to place assets into a static directory. They will not be touched by the build and will be copied over. The file can then be referenced directly but do not forget to include the site-folder in your reference. eg /site-name/my-img.png.
 
