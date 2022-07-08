@@ -1,17 +1,35 @@
 ---
+import '@/styles/app.scss';
+import logo from '@img/bmj-logo.png';
+
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
+
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>BMJ | { title }</title>
-</head>
-<body>
-	<slot />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMJ | { title }</title>
+  </head>
+
+  <body class="text-md md:text-base">
+    <header class="bg-[#2563B2] relative z-30" data-xp="header">
+      <div class="container mx-auto flex md:items-center">
+        <div class="px-4 py-10 w-3/5 md:px-12">
+          <a href="http://www.bmj.com/thebmj" target="_blank">
+            <img src={logo} alt="BMJ Logo" >
+            <span class="text-[#fff]">Hosted Content</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+	  <slot></slot>
+
+  </body>
 </html>
