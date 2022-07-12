@@ -10,7 +10,5 @@ export default defineConfig({
 	publicDir: 'static',
 	base: SITE_FOLDER,
 	outDir: `public/${SITE_FOLDER}`,
-	build: {
-		format: 'file',
-	},
+	build: { format: 'file' },
 });

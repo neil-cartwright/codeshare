@@ -1,12 +1,13 @@
 ---
 import '@/styles/app.scss';
-import logo from '@img/bmj-logo.png';
+import logo from '/bmj-logo.png';
 
 export interface Props {
 	title: string;
+  bodyClasses: string;
 }
 
-const { title } = Astro.props as Props;
+const { title, bodyClasses } = Astro.props as Props;
 ---
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -17,12 +18,12 @@ const { title } = Astro.props as Props;
     <title>BMJ | { title }</title>
   </head>
 
-  <body class="text-md md:text-base">
+  <body class={ bodyClasses }>
     <header class="bg-[#2563B2] relative z-30" data-xp="header">
       <div class="container mx-auto flex md:items-center">
         <div class="px-4 py-10 w-3/5 md:px-12">
           <a href="http://www.bmj.com/thebmj" target="_blank">
-            <img src={logo} alt="BMJ Logo" >
+            <img src={ logo } alt="BMJ Logo" >
             <span class="text-[#fff]">Hosted Content</span>
           </a>
         </div>
