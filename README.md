@@ -2,13 +2,14 @@
 
 ### Setup
 
--   clone this repo!
--   npm install
--   npm run dev | build
+- create a new repo using this template
+- clone the new repo that you just created
+- yarn install
 
 ### Requirements
 
-- BaseLayout must wrap all content to satisfy build requirements
+- PageLayout must wrap all pages to satisfy build requirements.
+- On PageLayout you can pass the title and bodyclasses to BaseLayout component.
 
 ### Images
 Using imports for images as the images will be processed in the build and also referenced correctly.
@@ -30,7 +31,16 @@ import logo from '@img/bmj-logo.png';
 </html>
 ```
 
-It is possible to place assets into a static directory. They will not be touched by the build and will be copied over. The file can then be referenced directly but do not forget to include the site-folder in your reference. eg /site-name/my-img.png.
+It is possible to place assets into a static directory. They will not be touched by the build and will be copied over. The file can then be referenced directly.
+
+```astro
+---
+import logo from '/bmj-logo.png';
+---
+<html>
+    <img src={logo} alt="BMJ Logo" />
+</html>
+```
 
 ### Notes
 
