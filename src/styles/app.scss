@@ -1,0 +1,86 @@
+@import "partials/_card.scss";
+
+/* cards */
+.card {
+  padding: 1rem;
+}
+
+/* example 1 */
+.card:has(> a) {
+  // background-color: burlywood;
+}
+
+.card:has(.demo-class) {
+  // background-color: hotpink;
+}
+
+.card:has(+ .second-card) {
+  // background-color: moccasin;
+}
+
+.card:not(:has(+ .card)) {
+  // background-color: orangered;
+}
+
+/* example 2 */
+.title {
+  margin-bottom: 3rem;
+}
+.title:not(:has(+ .subtitle)) {
+  // margin-bottom: 3rem;
+}
+.subtitle {
+  // margin-bottom: 2rem;
+}
+
+/* example 2 and 3 */
+.card:has(> img) {
+  // padding: 0;
+}
+.card:has(> img) .card__content {
+  // padding: 1rem;
+}
+
+/* example 5 */
+.card:has(input[type="checkbox"]:checked) {
+  background-color: mediumvioletred;
+}
+.card:has(input[type="checkbox"]:checked) > p {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+}
+
+/* example 6 */
+
+.card {
+  transition: all 0.33s ease;
+}
+.cards:has(.card:hover) .card:not(:hover) {
+  // opacity: 0.33;
+  // box-shadow: none;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+figure:has(figcaption) {
+  // border: 1px dotted slategray;
+  // padding: 4px;
+  // text-align: center;
+  // margin-bottom: 1rem;
+}
+
+/* 7 */
+
+.card:has(input:focus) {
+  // background-color: aqua;
+}
+
+.card:has(a:active) {
+  // background: burlywood;
+}
+
+.card:has(a[href^="https"]) {
+  // border: 3px dotted violet;
+}
